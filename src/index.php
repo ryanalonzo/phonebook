@@ -24,9 +24,8 @@ $users = $vivid->table('users')
                 <th>Actions</th>
             </thead>
             <tbody>
-            <?php foreach($users as $user):
-                $id = $user->id;
-            ?>
+            <?php foreach($users as $user): ?>
+                <?php $id = $user->id;?>
                 <tr>
                     <td><?php echo $user->first_name;?></td>
                     <td><?php echo $user->last_name;?></td>
@@ -37,14 +36,13 @@ $users = $vivid->table('users')
                         <input type="submit" name="delete<?php echo $id;?>" value="Delete">
                     <td>
                 </tr>
-            <?php
-                if(isset($_POST['delete'.$id])) {
-                    $vivid->delete('users',$id);
-                    header('Location: index.php');
-                }
-            endforeach;
-            ?>
-
+                <?php
+                    if(isset($_POST['delete'.$id])) {
+                        $vivid->delete('users',$id);
+                        header('Location: index.php');
+                    }
+                ?>
+            <?php endforeach; ?>
             </tbody>
         </table>
     </form>
