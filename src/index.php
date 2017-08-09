@@ -46,5 +46,6 @@ $users = $vivid->table('users')
             </tbody>
         </table>
     </form>
+    <button><a href="createContact.php">Add new Contact</a></button>
 </body>
 </html>
