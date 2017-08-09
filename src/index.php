@@ -14,23 +14,39 @@ $users = $vivid->table('users')
     <title>Phonebook</title>
 </head>
 <body>
-    <table>
-        <thead>
-            <th>Name</th>
-            <th>Address</th>
-            <th>Mobile Number</th>
-            <th>Phone Number</th>
-        </thead>
-        <tbody>
-        <?php foreach($users as $user): ?>
-            <tr>
-                <td><?php echo $user->first_name;?></td>
-                <td><?php echo $user->last_name;?></td>
-                <td><?php echo $user->mobile_number;?></td>
-                <td><?php echo $user->home_number;?></td>
-            </tr>
-        <?php endforeach;?>
-        </tbody>
-    </table>
+    <form action="#" method="POST">
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Mobile Number</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+            <?php foreach($users as $user):
+                $id = $user->id;
+            ?>
+                <tr>
+                    <td><?php echo $user->first_name;?></td>
+                    <td><?php echo $user->last_name;?></td>
+                    <td><?php echo $user->mobile_number;?></td>
+                    <td><?php echo $user->home_number;?></td>
+                    <td>
+                        <input type="submit" name="update<?php echo $id;?>" value="Update">
+                        <input type="submit" name="delete<?php echo $id;?>" value="Delete">
+                    <td>
+                </tr>
+            <?php
+                if(isset($_POST['delete'.$id])) {
+                    $vivid->delete('users',$id);
+                    header('Location: index.php');
+                }
+            endforeach;
+            ?>
+
+            </tbody>
+        </table>
+    </form>
 </body>
 </html>
