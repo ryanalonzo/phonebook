@@ -1,0 +1,42 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "93c399a89fb6009f34c13e3f3af86df5",
+    "packages": [
+        {
+            "name": "ralonzo/vivid",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ryanalonzo/vivid.git",
+                "reference": "25705c7fa3a4f4f6df2b36ac8ae9500ce55e9001"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Ryan Alonzo",
+                    "email": "yanalonzo25@yahoo.com"
+                }
+            ],
+            "time": "2017-08-09 07:59:32"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "ralonzo/vivid": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

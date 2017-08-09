@@ -1,0 +1,25 @@
+{
+    "name": "ryan/phonebook",
+    "description": "Phonebook using Vivid",
+    "type": "library",
+    "authors": [
+        {
+            "name": "ryanalonzo",
+            "email": "r_alonzo@outlook.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "src"
+        ]
+    },
+    "repositories": [
+        {
+            "url": "https://github.com/ryanalonzo/vivid.git",
+            "type": "git"
+        }
+    ],
+    "require": {
+        "ralonzo/vivid": "dev-master"
+    }
+}
