@@ -1,14 +1,14 @@
 {
-    "name": "ryan/phonebook",
+    "name": "ralonzo/phonebook",
     "description": "Phonebook using Vivid",
-    "type": "library",
+    "type": "Library",
     "authors": [
         {
             "name": "ryanalonzo",
             "email": "r_alonzo@outlook.com"
         }
     ],
-    "autoload": {
+     "autoload": {
         "classmap": [
             "src"
         ]

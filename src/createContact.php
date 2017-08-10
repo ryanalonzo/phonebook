@@ -17,7 +17,8 @@ if(isset($_POST['add'])) {
     ];
 
     $vivid = new Vivid('localhost', 'phonebook', 'root', 'password');
-    $vivid->create('users', $new);
+    $vivid->table('users')
+          ->create($new);
     header('Location: index.php');
 }
 ?>
