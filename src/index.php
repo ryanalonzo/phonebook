@@ -5,8 +5,8 @@ require_once('../vendor/autoload.php');
 $vivid = new Vivid('localhost', 'phonebook', 'root', 'password');
 $users = $vivid->table('users')
                ->get();
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +14,6 @@ $users = $vivid->table('users')
     <title>Phonebook</title>
 </head>
 <body>
-
     <table>
         <thead>
             <th>Name</th>
@@ -39,7 +38,7 @@ $users = $vivid->table('users')
                 </td>
                 <td>
                     <form method="POST">
-                        <input type = "submit" name = "delete<?php echo $id;?>" value="Delete">
+                        <input type = "submit" name = "delete<?php echo $id; ?>" value="Delete">
                     </form>
                 <td>
             </tr>
@@ -48,11 +47,12 @@ $users = $vivid->table('users')
                     $vivid->delete('users',$id);
                     header('Location: index.php');
                 }
-
             ?>
         <?php endforeach; ?>
         </tbody>
     </table>
-    <button><a href="createContact.php">Add new Contact</a></button>
+    <button>
+        <a href="createContact.php">Add new Contact</a>
+    </button>
 </body>
 </html>

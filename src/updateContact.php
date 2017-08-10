@@ -40,8 +40,8 @@ if(isset($_POST['save'])) {
           ->update($updated, $id);
     header('Location: index.php');
 }
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,22 +52,22 @@ if(isset($_POST['save'])) {
     <form action="#" method="POST">
         <table>
             <tr>
-                <td><input type = "text" name = "first_name" placeholder = "First Name" value = "<?php echo $firstName;?>"></td>
+                <td><input type = "text" name = "first_name" placeholder = "First Name" value = "<?php echo $firstName; ?>"></td>
             </tr>
             <tr>
-                <td><input type = "text" name = "last_name" placeholder = "Last Name" value = "<?php echo $lastName;?>"></td>
+                <td><input type = "text" name = "last_name" placeholder = "Last Name" value = "<?php echo $lastName; ?>"></td>
             </tr>
             <tr>
                 <td><input type = "text" name = "middle_name" placeholder = "Middle Name" value = "<?php echo $middleName;?>"></td>
             </tr>
             <tr>
-                <td><input type = "text" name = "birthdate" placeholder = "Birthdate" value = "<?php echo $birthdate;?>"></td>
+                <td><input type = "text" name = "birthdate" placeholder = "Birthdate" value = "<?php echo $birthdate; ?>"></td>
             </tr>
             <tr>
-                <td><input type = "text" name = "address_line1" placeholder = "Address Line 1" value = "<?php echo $address1;?>"></td>
+                <td><input type = "text" name = "address_line1" placeholder = "Address Line 1" value = "<?php echo $address1; ?>"></td>
             </tr>
             <tr>
-                <td><input type = "text" name = "address_line2" placeholder = "Address Line 2" value = "<?php echo $address2;?>"></td>
+                <td><input type = "text" name = "address_line2" placeholder = "Address Line 2" value = "<?php echo $address2; ?>"></td>
             </tr>
             <tr>
                 <td><input type = "text" name = "city" placeholder = "City" value = "<?php echo $city;?>"></td>
@@ -76,7 +76,7 @@ if(isset($_POST['save'])) {
                 <td><input type = "text" name = "province" placeholder = "Province" value = "<?php echo $province;?>"></td>
             </tr>
             <tr>
-                <td><input type = "text" name = "mobile_number" placeholder = "Mobile Number" value = "<?php echo $mobileNumber;?>"></td>
+                <td><input type = "text" name = "mobile_number" placeholder = "Mobile Number" value = "<?php echo $mobileNumber; ?>"></td>
             </tr>
             <tr>
                 <td><input type = "text" name = "home_number" placeholder = "Home Number" value = "<?php echo $homeNumber;?>"></td>
@@ -85,8 +85,9 @@ if(isset($_POST['save'])) {
                 <td>
                     <input type = "submit" name = "save" value="Save">
                     <input type = "hidden" name = "id" value = "<?php echo $id; ?>">
-
-                    <button><a href="index.php">Cancel</a></button>
+                    <button>
+                        <a href = "index.php">Cancel</a>
+                    </button>
                 </td>
             </tr>
         </table>

@@ -21,6 +21,7 @@ if(isset($_POST['add'])) {
           ->create($new);
     header('Location: index.php');
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +31,7 @@ if(isset($_POST['add'])) {
     <title>Create Contact</title>
 </head>
 <body>
-    <form action="#" method="POST">
+    <form action = "#" method = "POST">
         <table>
             <tr>
                 <td><input type = "text" name = "first_name" placeholder = "First Name"></td>
