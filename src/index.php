@@ -38,7 +38,7 @@ $users = $vivid->table('users')
                     </form>
                 </td>
                 <td>
-                    <form action="#" method="POST">
+                    <form method="POST">
                         <input type = "submit" name = "delete<?php echo $id;?>" value="Delete">
                     </form>
                 <td>
