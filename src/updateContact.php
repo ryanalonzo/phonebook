@@ -1,14 +1,8 @@
 <?php
 
 require_once('../vendor/autoload.php');
-/*
-    Initialize Vivid class
- */
 $vivid = new Vivid('localhost', 'phonebook', 'root', 'password');
-/*
-    Selects user by id
-    Sets every result in a variable.
- */
+
 if(isset($_POST['update'])) {
     $id = $_POST['id'];
     $info = $vivid->table('users')
@@ -26,10 +20,7 @@ if(isset($_POST['update'])) {
         $homeNumber   = $result->home_number;
     }
 }
-/*
-    Insert all changes in an array from the form
-    Insert array values to the database
- */
+
 if(isset($_POST['save'])) {
     $id = $_POST['id'];
     $updated = [

@@ -1,13 +1,7 @@
 <?php
 
 require_once('../vendor/autoload.php');
-/*
-    Initialize Vivid class
- */
 $vivid = new Vivid('localhost', 'phonebook', 'root', 'password');
-/*
-    Select all records from users.
- */
 $users = $vivid->table('users')
                ->get();
 
@@ -28,7 +22,6 @@ $users = $vivid->table('users')
             <th>Actions</th>
         </thead>
         <tbody>
-        <!-- Display all records from users table -->
         <?php foreach($users as $user): ?>
             <?php $id = $user->id;?>
             <tr>
@@ -49,9 +42,6 @@ $users = $vivid->table('users')
                 <td>
             </tr>
             <?php
-                /*
-                    Deletes user by id.
-                 */
                 if(isset($_POST['delete'.$id])) {
                     $vivid->delete('users',$id);
                     header('Location: index.php');
