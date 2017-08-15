@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ryanalonzo/vivid.git",
-                "reference": "d826216f605211657e71e488015bd0672bc0c773"
+                "reference": "7e1c5ad5b0c579658a584c722cbfa9cac3d60de6"
             },
             "type": "library",
             "autoload": {
@@ -26,7 +26,7 @@
                     "email": "yanalonzo25@yahoo.com"
                 }
             ],
-            "time": "2017-08-10T02:23:25+00:00"
+            "time": "2017-08-15T04:48:54+00:00"
         }
     ],
     "packages-dev": [],

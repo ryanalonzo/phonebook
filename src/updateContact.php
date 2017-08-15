@@ -6,7 +6,9 @@ $vivid = new Vivid('localhost', 'phonebook', 'root', 'password');
 if(isset($_POST['update'])) {
     $id = $_POST['id'];
     $info = $vivid->table('users')
-                   ->getByID($id);
+                   ->where('id', $id)
+                   ->get();
+
     foreach($info as $result) {
         $firstName    = $result->first_name;
         $lastName     = $result->last_name;
@@ -85,9 +87,7 @@ if(isset($_POST['save'])) {
                 <td>
                     <input type = "submit" name = "save" value="Save">
                     <input type = "hidden" name = "id" value = "<?php echo $id; ?>">
-                    <button>
-                        <a href = "index.php">Cancel</a>
-                    </button>
+                    <a href = "index.php">Cancel</a>
                 </td>
             </tr>
         </table>
