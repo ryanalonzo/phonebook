@@ -1,7 +1,11 @@
 <?php
 
 require_once('../vendor/autoload.php');
-$vivid = new Vivid('localhost', 'phonebook', 'root', 'password');
+
+$dotenv = new \Dotenv\Dotenv(__DIR__ . '/../');
+$dotenv->load();
+
+$vivid = new Vivid;
 
 if(isset($_POST['update'])) {
     $id = $_POST['id'];

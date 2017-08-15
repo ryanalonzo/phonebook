@@ -1,7 +1,10 @@
 <?php
 
 require_once('../vendor/autoload.php');
+$dotenv = new \Dotenv\Dotenv(__DIR__ . '/../');
+$dotenv->load();
 
+$vivid = new Vivid;
 if(isset($_POST['add'])) {
     $new = [
         'first_name'    => $_POST['first_name'],
@@ -16,7 +19,6 @@ if(isset($_POST['add'])) {
         'home_number'   => $_POST['home_number']
     ];
 
-    $vivid = new Vivid('localhost', 'phonebook', 'root', 'password');
     $vivid->table('users')
           ->create($new);
     header('Location: index.php');
